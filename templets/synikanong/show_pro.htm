@@ -1,0 +1,86 @@
+
+{dede:include filename="head.htm"/}
+<style type="text/css">
+ 
+.swiper-container { width: 100%;  margin: 5px auto; }
+.swiper-slide { text-align: center; font-size: 18px; background: #fff; /* Center slide text vertically */
+display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+ 
+.query .list p { text-align: center; }
+.query .list img { width: 100%; }
+
+
+</style>
+<div class="query" style="text-align:center;">
+  <h1 style="font-size:14px;">{xiao:$title}</h1>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide img_box"> <img src="{xiao:function.image($thumb)}" width="150px"   /> 
+        <!-- <p></p> --> 
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<div class="query">
+  <ul>
+    <li class="bar"><img src="{dede:global.cfg_basehost/}images/product.png" style="width:20px;margin-top:-5px;">产品信息</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/nm.png" style="width:20px;margin-top:-5px;">生产商：江苏正达生物科技有限公司</li>
+      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/zs.png" style="width:20px;margin-top:-5px;">生产地址：江苏南通如皋市如皋港化工大道</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/nm.png" style="width:20px;margin-top:-5px;">农药登记证号：{xiao:$nydjzh}</li>
+      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/zs.png" style="width:20px;margin-top:-5px;">生产批准证号：{xiao:$scpzzh}</li>
+        <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/zzs.png" style="width:20px;margin-top:-5px;">产品标准证号：{xiao:$cpbzzh}</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/guige.png" style="width:20px;margin-top:-5px;">产品规格：{xiao:$chanpinguige}</li>
+      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/jl.png" style="width:20px;margin-top:-5px;">剂型：{xiao:$jixing}</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/pici.png" style="width:20px;margin-top:-5px;">检验状态：{xiao:$jyzt}</li>
+    
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/bianhao.png" style="width:20px;margin-top:-5px;">生产类型：
+       {xiao:$shengchanleixing} </li>
+    
+    
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/du.png" style="width:20px;margin-top:-5px;">毒性：{xiao:$duxing}</li>
+ 
+   
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/guige.png" style="width:20px;margin-top:-5px;">产品防伪码：{xiao:$hits}</li>
+    
+  
+    
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/date.png" style="width:20px;margin-top:-5px;">生产日期：{xiao:$shengchanriqi}</li>
+
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/hzq.png" style="width:20px;margin-top:-5px;" />保质期：{xiao:$baozhiqi}</li>
+  {xiao:if $ziduanyi!=''}
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z1.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduanyi}</li>
+  {/xiao:if} 
+
+  {xiao:if $ziduaner!=''}
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z2.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduaner}</li>
+  {/xiao:if} 
+
+  {xiao:if $ziduansan!=''}
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z3.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduansan}</li>
+  {/xiao:if} 
+
+  {xiao:if $ziduansi!=''}
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z4.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduansi}</li>
+  {/xiao:if} 
+
+  {xiao:if $ziduanwu!=''}
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z5.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduanwu}</li>
+  {/xiao:if} 
+
+  {xiao:if $ziduanliu!=''}
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z6.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduanliu}</li>
+  {/xiao:if} 
+
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/name.png" style="width:20px;margin-top:-5px;" />推广方向：{xiao:$tuiguangfangxiang}</li>
+ 
+    
+  </ul>
+</div>
+<div class="query cnt" style="word-break:break-all;word-wrap:break-word;">
+ 
+ {dede:field.content/}
+</div>
+
+{dede:include filename="footer.htm"/}

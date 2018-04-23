@@ -1,0 +1,59 @@
+{dede:include filename="head.htm"/}
+<div class="htmleaf-container">
+  <form id="form1" class="form_book" method="post" method="/index.php?c=index&a=form&modelid=3">
+    <section class="htmleaf-content bgcolor-3"> <span class="input input--kohana">
+      <input name="data[nindexingming]" id="account" autocomplete="off" datatype="*2-6" nullmsg="填写姓名" class="input__field input__field--kohana" type="text" />
+      <label class="input__label input__label--kohana" for="input-29"> <i class="fa fa-fw fa-clock-o icon icon--kohana"></i> <span class="input__label-content input__label-content--kohana">填写您的姓名</span> </label>
+      </span> <span class="input input--kohana">
+      <input class="input__field input__field--kohana" datatype="*2-16" nullmsg="填写联系方式" autocomplete="off" name="data[lianxiQQ]" type="tel" id="input-29" />
+      <label class="input__label input__label--kohana" for="input-29"> <i class="fa fa-fw fa-clock-o icon icon--kohana"></i> <span class="input__label-content input__label-content--kohana">填写联系方式</span> </label>
+      </span> <span class="input input--kohana">
+      <textarea id="input-29" rows="4" class="input__field input__field--kohana" datatype="*2-500" nullmsg="填写意见"  name="data[liuyanneirong]"></textarea>
+      <label class="input__label input__label--kohana" for="input-29"> <i class="fa fa-fw fa-clock-o icon icon--kohana"></i> <span class="input__label-content input__label-content--kohana">填写宝贵意见</span> </label>
+      </span>
+      <p style="line-height:25px;text-align:left;color:#ffffff;font-size:12px;margin:0 0 0 2em;"> 
+        <!-- 提示：请填写真实个人信息，方便领奖核实 --> 
+      </p>
+      <span  style="width:150px;"> <span class="input" style="display:inline-block;" >
+      <input type="submit" name="button" id="submit" value="意见反馈" class="input--btn2">
+      </span> </span> </section>
+  </form>
+</div>
+<script src="{dede:global.cfg_basehost/}js/classie.js"></script> 
+<script>
+        (function () {
+            if (!String.prototype.trim) {
+                (function () {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function () {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [ ].slice.call(document.querySelectorAll('.input__field')).forEach(function (inputEl) {
+                // in case the input is already filled..
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
+                }
+
+                // events:
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
+
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
+            }
+
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
+                }
+            }
+        })();
+    </script> 
+
+
+{dede:include filename="footer.htm"/}

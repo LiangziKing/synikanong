@@ -1,0 +1,29 @@
+{dede:include filename="header.htm"/}
+<style type="text/css">
+  .xiaocms-page { margin-top:20px; margin-left:20px; }
+.xiaocms-page a { margin:0 5px; border:1px solid #ddd; padding:4px 10px; color:#666; line-height:28px; border-radius: 15px; }
+.xiaocms-page a:hover { border:1px solid #f00; background:#f00; color:#fff; }
+.xiaocms-page span { border-radius: 15px; background-color:#e4f6fc; color:#5394aa; border:1px solid #bfdfea; font-weight:bold; margin: 0 5px; padding: 4px 10px; }
+.xiaocms-page ul li { float:left; }
+</style>
+<div class="htmleaf-container">
+<div class="query cat">
+<ul class="list-media list-loop list-underline margin">
+{xiao:list catid=$catid page=$page pagesize=10}
+   <a href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}" >
+  <li><span>></span>
+    <div class="pic_fl"><img src="{xiao:function.image($xiao[thumb])}" alt="" width="60px" height="60px" /></div>
+    {xiao:$xiao['title']}</li>
+  </a>
+   {/xiao:list}
+<div class="xiaocms-page">
+      <div align="center">
+         {xiao:$pagelist}
+     </div> 
+</div>
+
+</div>
+
+</div>
+
+{dede:include filename="footer.htm"/}

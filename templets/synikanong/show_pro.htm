@@ -1,5 +1,4 @@
-
-{dede:include filename="head.htm"/}
+{dede:include filename="header.htm"/}
 <style type="text/css">
  
 .swiper-container { width: 100%;  margin: 5px auto; }
@@ -12,10 +11,10 @@ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex
 
 </style>
 <div class="query" style="text-align:center;">
-  <h1 style="font-size:14px;">{xiao:$title}</h1>
+  <h1 style="font-size:14px;">{dede:field.title /}</h1>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide img_box"> <img src="{xiao:function.image($thumb)}" width="150px"   /> 
+      <div class="swiper-slide img_box"> <img src="{dede:field.litpic /}" width="150px"   /> 
         <!-- <p></p> --> 
       </div>
     </div>
@@ -25,55 +24,55 @@ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex
 </div>
 <div class="query">
   <ul>
-    <li class="bar"><img src="{dede:global.cfg_basehost/}images/product.png" style="width:20px;margin-top:-5px;">产品信息</li>
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/nm.png" style="width:20px;margin-top:-5px;">生产商：江苏正达生物科技有限公司</li>
-      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/zs.png" style="width:20px;margin-top:-5px;">生产地址：江苏南通如皋市如皋港化工大道</li>
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/nm.png" style="width:20px;margin-top:-5px;">农药登记证号：{xiao:$nydjzh}</li>
-      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/zs.png" style="width:20px;margin-top:-5px;">生产批准证号：{xiao:$scpzzh}</li>
-        <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/zzs.png" style="width:20px;margin-top:-5px;">产品标准证号：{xiao:$cpbzzh}</li>
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/guige.png" style="width:20px;margin-top:-5px;">产品规格：{xiao:$chanpinguige}</li>
-      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/jl.png" style="width:20px;margin-top:-5px;">剂型：{xiao:$jixing}</li>
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/pici.png" style="width:20px;margin-top:-5px;">检验状态：{xiao:$jyzt}</li>
+    <li class="bar"><img src="{dede:global.cfg_basehost/}/assets/img/product.png" style="width:20px;margin-top:-5px;">产品信息</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/nm.png" style="width:20px;margin-top:-5px;">生产商：江苏正达生物科技有限公司</li>
+      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/zs.png" style="width:20px;margin-top:-5px;">生产地址：江苏南通如皋市如皋港化工大道</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/nm.png" style="width:20px;margin-top:-5px;">农药登记证号：{dede:field.nydjzh /}</li>
+      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/zs.png" style="width:20px;margin-top:-5px;">生产批准证号：{dede:field.scpzzh /}</li>
+        <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/zzs.png" style="width:20px;margin-top:-5px;">产品标准证号：{dede:field.cpbzzh /}</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/guige.png" style="width:20px;margin-top:-5px;">产品规格：{dede:field.chanpinguige /}</li>
+      <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/jl.png" style="width:20px;margin-top:-5px;">剂型：{dede:field.jixing /}</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/pici.png" style="width:20px;margin-top:-5px;">检验状态：{dede:field.jyzt /}</li>
     
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/bianhao.png" style="width:20px;margin-top:-5px;">生产类型：
-       {xiao:$shengchanleixing} </li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/bianhao.png" style="width:20px;margin-top:-5px;">生产类型：
+       {dede:field.shengchanleixing /} </li>
     
     
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/du.png" style="width:20px;margin-top:-5px;">毒性：{xiao:$duxing}</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/du.png" style="width:20px;margin-top:-5px;">毒性：{dede:field.duxing /}</li>
  
    
-    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/guige.png" style="width:20px;margin-top:-5px;">产品防伪码：{xiao:$hits}</li>
+    <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/guige.png" style="width:20px;margin-top:-5px;">产品防伪码：{dede:field.hits /}</li>
     
   
     
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/date.png" style="width:20px;margin-top:-5px;">生产日期：{xiao:$shengchanriqi}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/date.png" style="width:20px;margin-top:-5px;">生产日期：{dede:field.shengchanriqi /}</li>
 
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/hzq.png" style="width:20px;margin-top:-5px;" />保质期：{xiao:$baozhiqi}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/hzq.png" style="width:20px;margin-top:-5px;" />保质期：{dede:field.baozhiqi /}</li>
   {xiao:if $ziduanyi!=''}
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z1.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduanyi}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/z1.png" style="width:20px;margin-top:-5px;" />{dede:field.ziduanyi /}</li>
   {/xiao:if} 
 
   {xiao:if $ziduaner!=''}
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z2.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduaner}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/z2.png" style="width:20px;margin-top:-5px;" />{dede:field.ziduaner /}</li>
   {/xiao:if} 
 
   {xiao:if $ziduansan!=''}
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z3.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduansan}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/z3.png" style="width:20px;margin-top:-5px;" />{dede:field.ziduansan /}</li>
   {/xiao:if} 
 
   {xiao:if $ziduansi!=''}
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z4.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduansi}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/z4.png" style="width:20px;margin-top:-5px;" />{dede:field.ziduansi /}</li>
   {/xiao:if} 
 
   {xiao:if $ziduanwu!=''}
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z5.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduanwu}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/z5.png" style="width:20px;margin-top:-5px;" />{dede:field.ziduanwu /}</li>
   {/xiao:if} 
 
   {xiao:if $ziduanliu!=''}
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/z6.png" style="width:20px;margin-top:-5px;" />{xiao:$ziduanliu}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/z6.png" style="width:20px;margin-top:-5px;" />{dede:field.ziduanliu /}</li>
   {/xiao:if} 
 
-  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}images/name.png" style="width:20px;margin-top:-5px;" />推广方向：{xiao:$tuiguangfangxiang}</li>
+  <li class=""><i class="nbsp"></i><img src="{dede:global.cfg_basehost/}/assets/img/name.png" style="width:20px;margin-top:-5px;" />推广方向：{dede:field.tuiguangfangxiang /}</li>
  
     
   </ul>

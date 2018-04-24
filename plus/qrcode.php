@@ -18,7 +18,7 @@ if ( $action=='get_qrcode' )
     {
         $url = $cfg_basehost.$cfg_plus_dir.'/list.php?tid='.$id;
     }
-    if($id==0) $url = "http://2v.dedecms.com";
+    if($id==0) $url = "$cfg_basehost";
     if ( $type=='index' ) $url = $cfg_basehost.$cfg_plus_dir.'/index.php';
 
     header("Content-Type: image/png");

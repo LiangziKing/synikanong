@@ -238,13 +238,13 @@ $dlist = new DataListCP();
 $dlist->pageSize = 20;
 $dlist->SetParameter("hash", $sqlhash);
 $dlist->SetParameter("mid", $mid);
-if(file_exists(DEDEROOT."/templets/default/$template"))
+if(file_exists(DEDEROOT."/templets/synikanong/$template"))
 {
-    $templatefile = DEDEROOT."/templets/default/$template";
+    $templatefile = DEDEROOT."/templets/synikanong/$template";
 }
 else
 {
-    $templatefile = DEDEROOT."/templets/default/advancedsearch.htm";
+    $templatefile = DEDEROOT."/templets/synikanong/advancedsearch.htm";
 }
 $dlist->SetTemplate($templatefile);
 $dlist->SetSource($query);

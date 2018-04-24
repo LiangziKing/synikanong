@@ -747,6 +747,7 @@ class SearchView
                     $row["typeurl"] = GetTypeUrl($row["typeid"],$row["typedir"],$row["isdefault"],$row["defaultname"],$row["ispart"],$row["namerule2"],$row["moresite"],$row["siteurl"],$row["sitepath"]);
                     $row["info"] = $row["description"];
                     $row["filename"] = $row["arcurl"];
+                    $row["hits"] =  $row["hits"];
                     $row["stime"] = GetDateMK($row["pubdate"]);
                     $row["textlink"] = "<a href='".$row["filename"]."'>".$row["title"]."</a>";
                     $row["typelink"] = "[<a href='".$row["typeurl"]."'>".$row["typename"]."</a>]";

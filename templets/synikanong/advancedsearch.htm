@@ -1,0 +1,31 @@
+{dede:include filename="index_header.htm"/}
+ <!-- {xiao:if empty($num)} -->
+ <div class="query">
+抱歉，没有找到“{dede:global name='keyword' function='RemoveXSS(@me)'/}”相关的产品。
+ </div>
+  <!-- {xiao:else} -->
+                    {dede:datalist}
+                    <div class="query goods" style="line-height:40px;"> <img src="{dede:global.cfg_basehost/}/assets/img/1189.png" style="vertical-align: middle;position: relative;top: -1px;" width="25" height="25" alt="">您购买的【[field:title/]】是合格产品。<span id="hits" style="display:none">335</span> </div>
+<div class="query">
+  <ul>
+    <li class="bar"><img src="{dede:global.cfg_basehost/}/assets/img/label.png" style="width:20px;margin-top:-5px;" />标签信息</li>
+    <li class=""><i class="nbsp"></i> <img src="{dede:global.cfg_basehost/}/assets/img/xuke.png" style="width:20px;margin-top:-5px;" /><b class="cg">生产经营者名称：</b><br />
+      {dede:global.cfg_webname /} </li>
+    <li class=""><i class="nbsp"></i> <img src="{dede:global.cfg_basehost/}/assets/img/name.png" style="width:20px;margin-top:-5px;" /><b class="cg">农药名称：</b><br />
+     [field:title/]</li>
+    <li> <i class="nbsp"></i> <img src="{dede:global.cfg_basehost/}/assets/img/code.png" style="width:20px;margin-top:-5px;" /><b class="cg">单元识别代码：</b><br />
+      [field:hits/]</li>
+
+ <li> <i class="nbsp"></i> <img src="/template/assets//assets/img/hzq.png" style="width:20px;margin-top:-5px;" /><b class="cg">联系售后：</b><br />
+      全国免费服务热线：400-6767-351
+</li>
+
+
+    <li> <i class="nbsp"></i><i class="nbsp"></i><i class="nbsp"></i> <img src="{dede:global.cfg_basehost/}/assets/img/site.png" style="width:20px;margin-top:-5px;" /> <a href="{xiao:$site_url}"><b class="cg">追溯网址</b>：<br />
+      [field.global.cfg_basehost/]</a> </li>
+    <li style="text-align:center;"><a href="{xiao:$t['url']}" style="margin:0; text-align: center;"><span>点击查看详细</span></a></li>
+  </ul>
+</div>
+ {/dede:datalist}
+                <!-- {/xiao:if} -->
+{dede:include filename="footer.htm"/}

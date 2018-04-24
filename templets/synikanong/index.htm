@@ -1,7 +1,7 @@
 {dede:include filename="header.htm"/}
 <div class="htmleaf-container">
- <form method="get" action="index.php" >
- <input type="hidden"  value="index"  name="c" />
+ <form method="post" action="/plus/advancedsearch.php" >
+ <input type="hidden"  value="6"  name="mid" />
     <input type="hidden"  value="search"  name="a" />
     <section class="htmleaf-content bgcolor-3"> <span class="input input--kohana">
       <input name="kw" placeholder="填写产品防伪码" autocomplete="off" class="input__field input__field--kohana" type="text" />
@@ -14,8 +14,8 @@
       <p class="notice">2、可使用微信扫描包装袋上二维码查询真伪</p>
       <p class="notice">3、唯一网址：<br />
         <a style="color:#4ebc57;" href="{dede:global.cfg_basehost/}">{dede:global.cfg_basehost/}</a></p>
-      <p class="notice" style="text-align:center;width:90%;"><img src="{xiao:block 12}"> <br />
-        长按或扫描二维码访问官方网站 </p>{dede:qrcode/}
+      <p class="notice" style="text-align:center;width:90%;"><img src="{dede:global.cfg_basehost/}/assets/img/qrcode.jpg"> <br />
+        长按或扫描二维码访问官方网站 </p>
     </section>
   </form>
 </div>
